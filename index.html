@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gradient-to-r from-pink-300 to-purple-400 flex items-center justify-center min-h-screen"
+  >
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+      <h2 class="text-2xl font-bold mb-6 text-center text-purple-700">
+        Survey Test
+      </h2>
+      <form id="surveyForm">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name"
+            >Name</label
+          >
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="name"
+            type="text"
+            placeholder="Your name"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email"
+            >Email</label
+          >
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+            type="email"
+            placeholder="Your email"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2"
+            >Do you do most of your shopping in</label
+          >
+          <div class="flex items-center">
+            <input
+              id="inStore"
+              type="radio"
+              name="shoppingPreference"
+              value="In Store"
+              class="mr-2 leading-tight"
+              required
+            />
+            <label for="inStore" class="text-gray-700">In Store</label>
+          </div>
+          <div class="flex items-center mt-2">
+            <input
+              id="online"
+              type="radio"
+              name="shoppingPreference"
+              value="Online"
+              class="mr-2 leading-tight"
+              required
+            />
+            <label for="online" class="text-gray-700">Online</label>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <p id="responseMessage" class="text-center mt-4 text-gray-700"></p>
+    </div>
+
+    <script>
+      document
+        .getElementById("surveyForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const shoppingPreference = document.querySelector(
+            'input[name="shoppingPreference"]:checked'
+          ).value;
+
+          fetch(
+            "https://script.google.com/macros/s/AKfycbxYJMiG8DcCOCcWzzFhAkeKlzhPxnTXRunVmP8vZJ07fqimD2dI_x8epkIoQslcKIQKGQ/exec",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name, email, shoppingPreference }),
+            }
+          )
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              document.getElementById("responseMessage").innerText =
+                "Form submitted successfully!";
+              document.getElementById("surveyForm").reset();
+            })
+            .catch((error) => {
+              document.getElementById("responseMessage").innerText =
+                "Error submitting form. Please try again.";
+            });
+        });
+    </script>
+  </body>
+</html>
