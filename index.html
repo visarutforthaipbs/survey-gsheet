@@ -21,6 +21,7 @@
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
+            name="name"
             type="text"
             placeholder="Your name"
             required
@@ -33,6 +34,7 @@
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
+            name="email"
             type="email"
             placeholder="Your email"
             required
@@ -45,8 +47,8 @@
           <div class="flex items-center">
             <input
               id="inStore"
-              type="radio"
               name="shoppingPreference"
+              type="radio"
               value="In Store"
               class="mr-2 leading-tight"
               required
@@ -56,8 +58,8 @@
           <div class="flex items-center mt-2">
             <input
               id="online"
-              type="radio"
               name="shoppingPreference"
+              type="radio"
               value="Online"
               class="mr-2 leading-tight"
               required
@@ -89,7 +91,7 @@
           ).value;
 
           fetch(
-            "https://script.google.com/macros/s/AKfycbxYJMiG8DcCOCcWzzFhAkeKlzhPxnTXRunVmP8vZJ07fqimD2dI_x8epkIoQslcKIQKGQ/exec",
+            "https://script.google.com/macros/s/AKfycbxQbMGLBmNjkyzsAgISaCUhi5Wy4W_Em3OmO1htiZheOTOF2V1mKKPvERdlVQb1PweG1g/exec",
             {
               method: "POST",
               headers: {
