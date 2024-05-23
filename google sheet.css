@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "poppins", sans-serif;
   font-size: 18px;
+  overflow: scroll;
+  font-family: "Noto Sans Thai", sans-serif;
+  font-style: normal;
+  font-variation-settings: "wdth" 200;
 }
 body {
   height: 100vh;
@@ -12,29 +17,42 @@ body {
   justify-content: center;
 }
 .container {
-  width: 500px;
+  width: 600px;
   padding: 30px;
   border: 1px solid #eeeeee;
   border-radius: 10px;
-  background-color: #003b5b;
+  background-color: #277bc0;
+  overflow: scroll;
 }
 h4 {
   margin-bottom: 10px;
   font-size: 24px;
   color: white;
+  text-align: center;
+  padding-bottom: 20px;
 }
 input {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
+  border-radius: 10px;
+  border-color: #277bc0;
 }
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
 textarea {
   width: 100%;
   padding: 10px;
 }
 #submit {
   border: none;
-  background-color: orangered;
+  background-color: #fcb000;
   color: white;
   width: 200px;
   margin-top: 10px;
@@ -42,4 +60,77 @@ textarea {
 }
 #submit:hover {
   background-color: #333333;
+}
+
+p {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.tab {
+  display: none;
+}
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+.step.active {
+  opacity: 1;
+}
+.step.finish {
+  background-color: #4caf50;
+}
+
+h2 {
+  color: white;
+}
+
+#prevBtn {
+  border: none;
+  background-color: #fcb000;
+  color: white;
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#nextBtn {
+  border: none;
+  background-color: #fcb000;
+  color: white;
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-color: #fcb000;
+  padding: 10px;
+  color: white;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  font-size: 16px;
 }

@@ -2,21 +2,574 @@
 <html>
   <head>
     <link rel="stylesheet" href="google sheet.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      แบบสำรวจความคิดเห็นประชาชนต่อบทบาท ที่มาและความเป็นสมาชิกวุฒิสภา
+    </title>
   </head>
+
   <body>
     <div class="container">
       <form
         method="post"
         action="https://script.google.com/macros/s/AKfycbw_09GqRISpcfsuzm-DBR2uWkoisYsEoBSsuh_qHo0mlM7HyGTbWkTI5h0_6kQtAVLWiw/exec"
         name="contact-form"
+        id="regForm"
       >
-        <h4>Contact Us</h4>
-        <input type="text" name="your-name" placeholder="Name" />
-        <input type="text" name="your-number" placeholder="Number" />
-        <input type="email" name="your-email" placeholder="Email" />
-        <textarea name="message" rows="7" placeholder="Your Message"></textarea>
+        <!--form head-->
+        <div class="tab">
+          <h4>
+            แบบสำรวจความคิดเห็นประชาชนต่อบทบาท ที่มาและความเป็นสมาชิกวุฒิสภา
+          </h4>
+          <img src="asset/survey cover.png" />
+          <p>
+            แบบสำรวจฉบับนี้ สร้างขึ้นเพื่อสำรวจความคิดเห็นประชาชนต่อบทบาท ที่มา
+            ลักษณะและความเป็น
+            สมาชิกวุฒิสภาของประเทศไทยระหว่างกระบวนการคัดเลือกสมาชิกวุฒิสภาในปี
+            2567 โดยข้อมูลชุดนี้จะถูกไป วิเคราะห์และสังเคราะห์ออกมาเป็น White
+            paper (สมุดปกขาว) หรือรายงานเอกสารที่จะทำหน้าที่เป็น
+            ข้อเสนอแนะและแนวทางให้แก่สมาชิกวุฒิสภาสมัยใหม่เพื่อให้การปฏบัติหน้าที่นั้นมีความยึดโยงกับความต้องการ
+            ของประชาชนภายใต้ระบอบสังคมประชาธิปไตยอย่างแท้จริง
+            และใช้ในกระบวนการฟังเสียงประเทศไทยและจัดทำเป็นเอกสารเพื่อเป็นข้อเสนอแนะแนวทางให้แก่สว.เพื่อปฏิบัติหน้าที่ตามความยึดโยงกับความต้องการของประชาชนในท้องถิ่น
+          </p>
+        </div>
+
+        <!--from input-->
+
+        <!--step 1-->
+        <div class="tab">
+          <h2>ระบุว่าท่านคือใคร</h2>
+          <p><input type="text" placeholder="อายุ" name="age" /></p>
+          <p><input type="text" placeholder="เพศ" name="gender" /></p>
+          <div>
+            <select name="education">
+              <option value="" disabled selected>การศึกษา</option>
+              <option value="none">ไม่มีการศึกษา</option>
+              <option value="primary">ประถมศึกษา</option>
+              <option value="secondary">มัธยมศึกษา</option>
+              <option value="bachelor">ปริญญาตรี</option>
+              <option value="master">ปริญญาโท</option>
+              <option value="doctorate">ปริญญาเอก</option>
+            </select>
+          </div>
+          <p><input type="text" placeholder="จังหวัด" name="province" /></p>
+          <div>
+            <select name="region">
+              <option value="" disabled selected>ภาค</option>
+              <option value="none">ภาคเหนือ</option>
+              <option value="primary">ภาคกลาง</option>
+              <option value="secondary">ภาคตะวันออกเฉียงเหนือ</option>
+              <option value="bachelor">ภาคใต้</option>
+            </select>
+          </div>
+        </div>
+
+        <!--step 2-->
+        <div class="tab">
+          <h2>ระบุกลุ่มอาชีพ</h2>
+          <select name="occupation group">
+            <option value="" disabled selected>เลือกกลุ่มอาชีพของท่าน</option>
+
+            <option value="none">
+              กลุ่มการบริหารราชการแผ่นดินและความมั่นคง
+            </option>
+            <option value="primary">กลุ่มกฎหมายและกระบวนการยุติธรรม</option>
+            <option value="secondary">กลุ่มการศึกษา</option>
+            <option value="bachelor">กลุ่มสาธารณสุข</option>
+            <option value="bachelor">กลุ่มอาชีพทำนา</option>
+            <option value="none">กลุ่มอาชีพทำสวน</option>
+            <option value="primary">กลุ่มประกอบอาชีพด้านสิ่งแวดล้อม</option>
+            <option value="secondary">
+              กลุ่มผู้ประกอบกิจการขนาดกลางและขนาดย่อยตามกฎหมาย
+            </option>
+            <option value="bachelor">
+              กลุ่มผู้ประกอบกิจการอื่นนอกจากกิจการตามกลุ่ม
+              (กลุ่มผู้ประกอบกิจการขนาดกลางและขนาดย่อยตามกฎหมาย)
+            </option>
+            <option value="bachelor">
+              กลุ่มผู้ประกอบธุรกิจหรืออาชีพด้านการท่องเที่ยว
+            </option>
+            <option value="none">กลุ่มผู้ประกอบอุตสาหกรรม</option>
+            <option value="primary">กลุ่มสตรี</option>
+            <option value="secondary">
+              กลุ่มผู้สูงอายุ คนพิการหรือทุพพลภาพ กลุ่มชาติพันธุ์
+            </option>
+            <option value="bachelor">กลุ่มศิลปะ วัฒนธรรม ดนตรี</option>
+            <option value="bachelor">กลุ่มประชาสังคม</option>
+            <option value="none">กลุ่มสื่อสารมวลชน</option>
+            <option value="primary">กลุ่มผู้ประกอบวิชาชีพอิสระ</option>
+            <option value="secondary">กลุ่มอื่น ๆ</option>
+          </select>
+        </div>
+
+        <!--step 3-->
+        <div class="tab">
+          <h2>
+            ในภาพรวมทั้งหมด
+            ท่านมีความพึงพอใจต่อวิถีทางประชาธิปไตยของประเทศไทยในปัจจุบันมากน้อย
+            เพียงใด
+          </h2>
+          <select name="question1">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">พึงพอใจมาก</option>
+            <option value="primary">พึงพอใจ</option>
+            <option value="secondary">ไม่ค่อยพึงพอใจ</option>
+            <option value="bachelor">ไม่พึงพอใจเป็นอย่างมาก</option>
+            <option value="bachelor">ไม่แน่ใจ</option>
+          </select>
+        </div>
+
+        <!--step 4-->
+        <div class="tab">
+          <h2>
+            ท่านเห็นด้วยหรือไม่ว่าสว.ก็คือตัวแทนของประชาชนเช่นเดียวกันกับสส.
+          </h2>
+          <select name="question2">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">พึงพอใจมาก</option>
+            <option value="primary">พึงพอใจ</option>
+            <option value="secondary">ไม่ค่อยพึงพอใจ</option>
+            <option value="bachelor">ไม่พึงพอใจเป็นอย่างมาก</option>
+            <option value="bachelor">ไม่แน่ใจ</option>
+          </select>
+        </div>
+
+        <!--step 5-->
+        <div class="tab">
+          <h2>ท่านเห็นด้วยหรือไม่ว่าส.ว.ก็คือนักการเมือง</h2>
+          <select name="question3">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">พึงพอใจมาก</option>
+            <option value="primary">พึงพอใจ</option>
+            <option value="secondary">ไม่ค่อยพึงพอใจ</option>
+            <option value="bachelor">ไม่พึงพอใจเป็นอย่างมาก</option>
+            <option value="bachelor">ไม่แน่ใจ</option>
+          </select>
+        </div>
+
+        <!--step 6-->
+        <div class="tab">
+          <h2>ท่านคิดว่าประเทศไทยควรมีส.ว.ต่อหรือไม่?</h2>
+          <select name="question4">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">ควร</option>
+            <option value="primary">ไม่ควร</option>
+            <option value="secondary">ไม่แน่ใจ</option>
+          </select>
+        </div>
+
+        <!--step 7-->
+        <div class="tab">
+          <h2>
+            หากท่านเห็นด้วยว่าควรจะมีสว.ต่อ วิธีการได้มาซึ่งสว.ควรเป็นเช่นไร?
+          </h2>
+          <select name="question5">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">เลือกตั้งทางตรง</option>
+            <option value="primary">เลือกตั้งทางอ้อม</option>
+            <option value="secondary">แต่งตั้ง</option>
+            <option value="secondary">ผสมเลือกตั้งและแต่งตั้ง</option>
+            <option value="secondary">อื่น ๆ</option>
+          </select>
+        </div>
+
+        <!--step 8-->
+        <div class="tab">
+          <h2>คุณเห็นด้วยกับอะไรมากกว่ากัน</h2>
+          <select name="question6">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">
+              บทบาทของสว.
+              คือเป็นตัวแทนเฉพาะกลุ่มทางสังคมหรือวิชาชีพเพื่อรับรองสิทธิและเสียงของกลุ่มคน
+              เหล่านี้ ยึดโยงกับประชาชน
+            </option>
+            <option value="primary">
+              บทบาทของสว.คือผู้คัดกรองกฎหมาย ให้ความเห็นชอบทางกฎหมาย
+              และการการเข้าตำแหน่งของ องค์กรอิสระ
+            </option>
+            <option value="secondary">เห็นด้วยทั้งสองข้อ</option>
+            <option value="secondary">ผสมเลือกตั้งและแต่งตั้ง</option>
+            <option value="secondary">ไม่เห็นด้วยทั้งสองข้อ</option>
+          </select>
+        </div>
+
+        <!--step 9-->
+        <div class="tab">
+          <h2>โปรดจัดลำดับ 6 ลักษณะนิสัยหรือบุคลิกที่ท่านอยากจะเห็นในตัวสว.</h2>
+          <p>โดยเรียงลำดับตั้งแต่อยากเห็นมากที่สุด (1) ไปถึงน้อยที่สุด (6)</p>
+          <p>
+            เลือก 6 ลักษณะ จัดลำดับด้วยการเลือกในคะแนนนจากากที่สุด (1)
+            ไปถึงน้อยที่สุด (6) ส่วนลักษณะหรือบุคลิกที่เหลือให้กดช่อง (ไม่เลือก)
+          </p>
+          <table border="1">
+            <tr>
+              <th></th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>ไม่เลือก</th>
+            </tr>
+            <tr>
+              <td>มีความน่าเชื่อถือ</td>
+              <td><input type="radio" name="trust-question1" value="1" /></td>
+              <td><input type="radio" name="trust-question1" value="2" /></td>
+              <td><input type="radio" name="trust-question1" value="3" /></td>
+              <td><input type="radio" name="trust-question1" value="4" /></td>
+              <td><input type="radio" name="trust-question1" value="5" /></td>
+              <td><input type="radio" name="trust-question1" value="6" /></td>
+              <td>
+                <input type="radio" name="trust-question1" value="no_choice" />
+              </td>
+            </tr>
+            <tr>
+              <td>สงบ และควบคุมอารมณ์ สติทำได้ดี</td>
+              <td><input type="radio" name="clam-question2" value="1" /></td>
+              <td><input type="radio" name="clam-question2" value="2" /></td>
+              <td><input type="radio" name="clam-question2" value="3" /></td>
+              <td><input type="radio" name="clam-question2" value="4" /></td>
+              <td><input type="radio" name="clam-question2" value="5" /></td>
+              <td><input type="radio" name="clam-question2" value="6" /></td>
+              <td>
+                <input type="radio" name="clam-question2" value="no_choice" />
+              </td>
+            </tr>
+            <tr>
+              <td>มีชื่อเสียง หรือเป็นที่รู้จักของประชาชน</td>
+              <td><input type="radio" name="fame-question3" value="1" /></td>
+              <td><input type="radio" name="fame-question3" value="2" /></td>
+              <td><input type="radio" name="fame-question3" value="3" /></td>
+              <td><input type="radio" name="fame-question3" value="4" /></td>
+              <td><input type="radio" name="fame-question3" value="5" /></td>
+              <td><input type="radio" name="fame-question3" value="6" /></td>
+              <td>
+                <input type="radio" name="fame-question3" value="no_choice" />
+              </td>
+            </tr>
+            <tr>
+              <td>มีความรู้และฉลาด</td>
+              <td>
+                <input type="radio" name="knowledge-question4" value="1" />
+              </td>
+              <td>
+                <input type="radio" name="knowledge-question4" value="2" />
+              </td>
+              <td>
+                <input type="radio" name="knowledge-question4" value="3" />
+              </td>
+              <td>
+                <input type="radio" name="knowledge-question4" value="4" />
+              </td>
+              <td>
+                <input type="radio" name="knowledge-question4" value="5" />
+              </td>
+              <td>
+                <input type="radio" name="knowledge-question4" value="6" />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="knowledge-question4"
+                  value="no_choice"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>เปิดรับความคิดใหม่ ๆ หรือไอเดียสร้างสรรค์ใหม่ ๆ</td>
+              <td><input type="radio" name="idea-question5" value="1" /></td>
+              <td><input type="radio" name="idea-question5" value="2" /></td>
+              <td><input type="radio" name="idea-question5" value="3" /></td>
+              <td><input type="radio" name="idea-question5" value="4" /></td>
+              <td><input type="radio" name="idea-question5" value="5" /></td>
+              <td><input type="radio" name="idea-question5" value="6" /></td>
+              <td>
+                <input type="radio" name="idea-question5" value="no_choice" />
+              </td>
+            </tr>
+            <tr>
+              <td>มีน้ำใจ นึกถึงจิตใจผู้อื่น</td>
+              <td><input type="radio" name="kind-question6" value="1" /></td>
+              <td><input type="radio" name="kind-question6" value="2" /></td>
+              <td><input type="radio" name="kind-question6" value="3" /></td>
+              <td><input type="radio" name="kind-question6" value="4" /></td>
+              <td><input type="radio" name="kind-question6" value="5" /></td>
+              <td><input type="radio" name="kind-question6" value="6" /></td>
+              <td>
+                <input type="radio" name="kind-question6" value="no_choice" />
+              </td>
+            </tr>
+            <tr>
+              <td>ทำงานร่วมกับผู้อื่นได้เป็นอย่างดี</td>
+              <td>
+                <input type="radio" name="workother-question7" value="1" />
+              </td>
+              <td>
+                <input type="radio" name="workother-question7" value="2" />
+              </td>
+              <td>
+                <input type="radio" name="workother-question7" value="3" />
+              </td>
+              <td>
+                <input type="radio" name="workother-question7" value="4" />
+              </td>
+              <td>
+                <input type="radio" name="workother-question7" value="5" />
+              </td>
+              <td>
+                <input type="radio" name="workother-question7" value="6" />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="workother-question7"
+                  value="no_choice"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>ทำงานหนัก</td>
+              <td>
+                <input type="radio" name="workhard-question8" value="1" />
+              </td>
+              <td>
+                <input type="radio" name="workhard-question8" value="2" />
+              </td>
+              <td>
+                <input type="radio" name="workhard-question8" value="3" />
+              </td>
+              <td>
+                <input type="radio" name="workhard-question8" value="4" />
+              </td>
+              <td>
+                <input type="radio" name="workhard-question8" value="5" />
+              </td>
+              <td>
+                <input type="radio" name="workhard-question8" value="6" />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="workhard-question8"
+                  value="no_choice"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>มีระเบียบและยึดติดกับกฎเกณฑ์</td>
+              <td><input type="radio" name="dis-question9" value="1" /></td>
+              <td><input type="radio" name="dis-question9" value="2" /></td>
+              <td><input type="radio" name="dis-question9" value="3" /></td>
+              <td><input type="radio" name="dis-question9" value="4" /></td>
+              <td><input type="radio" name="dis-question9" value="5" /></td>
+              <td><input type="radio" name="dis-question9" value="6" /></td>
+              <td>
+                <input type="radio" name="dis-question9" value="no_choice" />
+              </td>
+            </tr>
+            <tr>
+              <td>ซื่อสัตย์และจริงใจ</td>
+              <td><input type="radio" name="hon-question10" value="1" /></td>
+              <td><input type="radio" name="hon-question10" value="2" /></td>
+              <td><input type="radio" name="hon-question10" value="3" /></td>
+              <td><input type="radio" name="hon-question10" value="4" /></td>
+              <td><input type="radio" name="hon-question10" value="5" /></td>
+              <td><input type="radio" name="hon-question10" value="6" /></td>
+              <td>
+                <input type="radio" name="hon-question10" value="no_choice" />
+              </td>
+            </tr>
+            <tr>
+              <td>เป็นธรรม</td>
+              <td><input type="radio" name="fair-question10" value="1" /></td>
+              <td><input type="radio" name="fair-question10" value="2" /></td>
+              <td><input type="radio" name="fair-question10" value="3" /></td>
+              <td><input type="radio" name="fair-question10" value="4" /></td>
+              <td><input type="radio" name="fair-question10" value="5" /></td>
+              <td><input type="radio" name="fair-question10" value="6" /></td>
+              <td>
+                <input type="radio" name="fair-question10" value="no_choice" />
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!--step 10-->
+        <div class="tab">
+          <h2>
+            ระหว่างสว.ที่ใช้เวลาในการตัดสินใจอย่างรวดเร็ว กับ
+            สว.ที่ใช้เวลาในการตัดสินใจนาน ท่านอยากเห็นสว. เป็นคนบุคลิคแบบใด?
+          </h2>
+          <select name="step-10">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">ตัดสินใจอย่างรวดเร็ว</option>
+            <option value="primary">ตัดสินใจนาน</option>
+          </select>
+        </div>
+
+        <!--step 11-->
+        <div class="tab">
+          <h2>
+            ระหว่างสว.ที่ยึดมั่นกับความคิดและอุดมการณ์ที่ตนเองมี กับ
+            สว.ที่เปิดรับความคิดใหม่ ๆ อยู่เสมอ
+            ท่านอยากเห็นสว.เป็นคนบุคลลิคแบบใด?*
+          </h2>
+          <select name="step-11">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">
+              ยึดมั่นกับความคิดและอุดมการณ์ที่ตนเองมี
+            </option>
+            <option value="primary">เปิดรับความคิดใหม่ ๆ อยู่เสมอ</option>
+          </select>
+        </div>
+
+        <!--step 12-->
+        <div class="tab">
+          <h2>
+            ระหว่างสว.ที่คลุกคลีกับวงสังคมและผู้คนอยู่เสมอ กับ
+            สว.ที่ปฏิบัติหน้าที่จากโต๊ะทำงานเป็นหลัก ท่าน
+            อยากเห็นสว.เป็นคนบุคลลิคแบบใด?
+          </h2>
+          <select name="step-12">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">คลุกคลีกับวงสังคมและผู้คนอยู่เสมอ</option>
+            <option value="primary">ปฏิบัติหน้าที่จากโต๊ะทำงานเป็นหลัก</option>
+          </select>
+        </div>
+
+        <!--step 13-->
+        <div class="tab">
+          <h2>
+            ระหว่างสว.ที่ขี้สงสารและใจอ่อน กับสว.ที่ใจเด็ด และเฉียบขาด
+            ท่านอยากเห็นสว.เป็นคนบุคคลิคแบบ ใด?
+          </h2>
+          <select name="step-13">
+            <option value="" disabled selected>โปรดเลือก</option>
+            <option value="none">ขี้สงสารและใจอ่อน</option>
+            <option value="primary">ใจเด็ด และเฉียบขาด</option>
+          </select>
+        </div>
+
+        <!--step 14-->
+        <div class="tab">
+          <h2>ท่านคาดหวังให้ สว. มีบทบาททำอะไรให้กับสังคมมากที่สุด?</h2>
+          <p>
+            กรุณาทำเครื่องหมาย √ ลงในช่องว่างที่ตรงกับ ความเห็นของท่านมากที่สุด
+          </p>
+          <p>
+            1 = (ไม่คาดหวังเลย) 2 = (ไม่ค่อยคาดหวัง) 3 = (คาดหวัง) 4 =
+            (คาดหวังมาก) 5 = (คาดหวังมากที่สุด)
+          </p>
+          <table border="1">
+            <tr>
+              <th></th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+            </tr>
+            <tr>
+              <td>ท่านคาดหวังให้ สว. มีบทบาทในการเห็นชอบการแก้ไขรัฐธรรมนูญ</td>
+              <td><input type="radio" name="expectation1" value="1" /></td>
+              <td><input type="radio" name="expectation1" value="2" /></td>
+              <td><input type="radio" name="expectation1" value="3" /></td>
+              <td><input type="radio" name="expectation1" value="4" /></td>
+              <td><input type="radio" name="expectation1" value="5" /></td>
+            </tr>
+            <tr>
+              <td>ท่านคาดหวังให้ สว. มีบทบาทในการกลั่นกรอง เห็นชอบกฎหมาย</td>
+              <td><input type="radio" name="expectation2" value="1" /></td>
+              <td><input type="radio" name="expectation2" value="2" /></td>
+              <td><input type="radio" name="expectation2" value="3" /></td>
+              <td><input type="radio" name="expectation2" value="4" /></td>
+              <td><input type="radio" name="expectation2" value="5" /></td>
+            </tr>
+            <tr>
+              <td>
+                ท่านคาดหวังให้ สว. มีบทบาทการตรวจสอบรัฐบาล
+                โดยวิธีการตั้งกระทู้และเปิดอภิปรายทั่วไป
+              </td>
+              <td><input type="radio" name="expectation3" value="1" /></td>
+              <td><input type="radio" name="expectation3" value="2" /></td>
+              <td><input type="radio" name="expectation3" value="3" /></td>
+              <td><input type="radio" name="expectation3" value="4" /></td>
+              <td><input type="radio" name="expectation3" value="5" /></td>
+            </tr>
+            <tr>
+              <td>
+                ท่านคาดหวังให้ สว.
+                มีบทบาทการให้ความเห็นชอบการแต่งตั้งผู้ดำรงตำแหน่งในองค์กรอิสระ/
+                ศาลรัฐธรรมนูญ
+              </td>
+              <td><input type="radio" name="expectation4" value="1" /></td>
+              <td><input type="radio" name="expectation4" value="2" /></td>
+              <td><input type="radio" name="expectation4" value="3" /></td>
+              <td><input type="radio" name="expectation4" value="4" /></td>
+              <td><input type="radio" name="expectation4" value="5" /></td>
+            </tr>
+            <tr>
+              <td>
+                ท่านคาดหวังให้ สว.
+                มีบทบาทการใช้อำนาจการถอดถอนในกรณีที่มีการละเมิดกฎหมายหรือประพฤติมิชอบของบุคคลที่ดำรงตำแหน่งในหน่วยงานของรัฐ
+              </td>
+              <td><input type="radio" name="expectation5" value="1" /></td>
+              <td><input type="radio" name="expectation5" value="2" /></td>
+              <td><input type="radio" name="expectation5" value="3" /></td>
+              <td><input type="radio" name="expectation5" value="4" /></td>
+              <td><input type="radio" name="expectation5" value="5" /></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Step 15 -->
+        <div class="tab">
+          <h2>
+            ท่านอยากให้สว.มีส่วนร่วมเปิดประเด็น อภิปราย
+            เรื่องสำคัญในท้องถิ่นของท่านในเรื่องใดบ้าง
+          </h2>
+          <p>
+            <textarea
+              name="step-16"
+              rows="7"
+              placeholder="ใส่ความเห็นของคุณ"
+            ></textarea>
+          </p>
+        </div>
+
+        <!--submit-->
         <input type="submit" value="Submit" id="submit" />
       </form>
+
+      <!-- Navigation Buttons -->
+      <div>
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+          ก่อนหน้า
+        </button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">ถัดไป</button>
+        <input type="submit" value="Submit" id="submit" style="display: none" />
+      </div>
+
+      <!-- Step Indicators -->
+      <div style="text-align: center; margin-top: 40px">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
     </div>
 
     <script src="google sheet.js"></script>
